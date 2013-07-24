@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * OOP PHP Class
+ * @category		IP Trace
+ * @author			Sohel Amin
+ * @email			sohelamincse@gmail.com
+ * @author url		http://www.sohelamin.com
+ * @company url		http://www.appzcoder.com
+ */
 require_once('geoplugin.class.php');
 
 $geoplugin = new geoPlugin();

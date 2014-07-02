@@ -7,10 +7,10 @@
  * @author url		http://www.sohelamin.com
  * @company url		http://www.appzcoder.com
  */
-require_once('geoplugin.class.php');
+require('geoplugin.class.php');
 
 $geoplugin = new geoPlugin();
-//$ip=$_SERVER['REMOTE_ADDR'];
+
 $geoplugin->locate('180.234.28.15');
 
 //locate the IP If you leave the ip from param then it will trace your ip.

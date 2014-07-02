@@ -14,30 +14,45 @@ the Free Software Foundation, either version 3 of the License, or
 
 class geoPlugin {
 	
-	//the geoPlugin server
-	var $host = 'http://www.geoplugin.net/php.gp?ip={IP}&base_currency={CURRENCY}';
+	//Declaring variables
+	public $host;
+	public $currency;	
+	public $ip;
+	public $city;
+	public $region;
+	public $areaCode;
+	public $dmaCode;
+	public $countryCode;
+	public $countryName;
+	public $continentCode;
+	public $latitude;
+	public $longitude;
+	public $currencyCode;
+	public $currencySymbol;
+	public $currencyConverter;
+	
+    public function __construct() {
+		//the geoPlugin server
+		$this->host = 'http://www.geoplugin.net/php.gp?ip={IP}&base_currency={CURRENCY}';
+			
+		//the default base currency
+		$this->currency = 'USD';
 		
-	//the default base currency
-	var $currency = 'USD';
-	
-	//initiate the geoPlugin vars
-	var $ip = null;
-	var $city = null;
-	var $region = null;
-	var $areaCode = null;
-	var $dmaCode = null;
-	var $countryCode = null;
-	var $countryName = null;
-	var $continentCode = null;
-	var $latitude = null;
-	var $longitude = null;
-	var $currencyCode = null;
-	var $currencySymbol = null;
-	var $currencyConverter = null;
-	
-	function geoPlugin() {
-
-	}
+		//initiate the geoPlugin vars
+		$this->ip = null;
+		$this->city = null;
+		$this->region = null;
+		$this->areaCode = null;
+		$this->dmaCode = null;
+		$this->countryCode = null;
+		$this->countryName = null;
+		$this->continentCode = null;
+		$this->latitude = null;
+		$this->longitude = null;
+		$this->currencyCode = null;
+		$this->currencySymbol = null;
+		$this->currencyConverter = null;
+    }
 	
 	function locate($ip = null) {
 		
@@ -71,6 +86,7 @@ class geoPlugin {
 		$this->currencySymbol = $data['geoplugin_currencySymbol'];
 		$this->currencyConverter = $data['geoplugin_currencyConverter'];
 		
+		return true;
 	}
 	
 	function fetch($host) {

@@ -1,4 +1,5 @@
-geoip_trace
+Free Geo IP Tracing Plugin
 ===========
 
-Free Geo IP Tracing Plugin
+USAGE
+===========
